@@ -12,17 +12,17 @@ import java.util.Map;
  *
  * @author adri
  */
-public class Histogram {
+public class Histogram<T> {
     
-    private final int[] data;
+    private final T[] data;
 
-    public Histogram(int[] data) {
+    public Histogram(T[] data) {
         this.data = data;
     }
    
     public Map getHistogram() {
-        Map<Integer,Integer> histogram = new HashMap<>();
-        for(int key : data) {
+        Map<T,Integer> histogram = new HashMap<>();
+        for(T key : data) {
             histogram.put(key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
         }
         return histogram;
