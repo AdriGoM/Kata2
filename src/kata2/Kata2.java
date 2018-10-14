@@ -19,7 +19,7 @@ public class Kata2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int[] numeros = {1,2,3,4,5,6,7,7,7,4,1,2,9,3,1};
+        Integer[] numeros = {1,2,3,4,5,6,7,7,7,4,1,2,9,3,1};
         Histogram histo = new Histogram(numeros);
         Map<Integer,Integer> histogr = histo.getHistogram();
         
