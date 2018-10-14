@@ -20,13 +20,10 @@ public class Kata2 {
     public static void main(String[] args) {
         // TODO code application logic here
         int[] numeros = {1,2,3,4,5,6,7,7,7,4,1,2,9,3,1};
-        Map<Integer,Integer> histogram = new HashMap<Integer,Integer>();
+        Histogram histo = new Histogram(numeros);
+        Map<Integer,Integer> histogr = histo.getHistogram();
         
-        for(int key : numeros) {
-            histogram.put(key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
-        }
-        
-        for(Map.Entry<Integer,Integer> entry : histogram.entrySet()) {
+        for(Map.Entry<Integer,Integer> entry : histogr.entrySet()) {
             System.out.println(entry.getKey() + " ==> " +  entry.getValue());
         }
     }
