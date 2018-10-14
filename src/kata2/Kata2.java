@@ -19,11 +19,11 @@ public class Kata2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Integer[] numeros = {1,2,3,4,5,6,7,7,7,4,1,2,9,3,1};
+        String[] numeros = {"Rosa", "Pepe", "María", "Pepe", "Pepe", "Rosa"};
         Histogram histo = new Histogram(numeros);
-        Map<Integer,Integer> histogr = histo.getHistogram();
+        Map<String,Integer> histogr = histo.getHistogram();
         
-        for(Map.Entry<Integer,Integer> entry : histogr.entrySet()) {
+        for(Map.Entry<String,Integer> entry : histogr.entrySet()) {
             System.out.println(entry.getKey() + " ==> " +  entry.getValue());
         }
     }
